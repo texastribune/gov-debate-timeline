@@ -37,31 +37,29 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
   }
 }
 
-.candidates {
+.republican { color: rgb(255, 0, 0); }
+.democratic { color: rgb(0, 0, 255); }
 
+.candidate {
+  text-align: center;
+}
+
+$medium: new-breakpoint(max-width em(600));
+
+.candidates-two {
   .candidate {
-    .republican { color: rgb(255, 0, 0); }
-    .democratic { color: rgb(0, 0, 255); }
+    @include span-columns(6 of 12);
   }
+}
 
-  &.candidates-four {
-    div.candidate {
-      @include span-columns(3 of 12);
-      text-align: center;
-    }
-  }
+.candidates-four {
+  .candidate {
+    @include span-columns(3 of 12);
 
-  &.candidates-three {
-    div.candidate {
-      @include span-columns(4 of 12);
-      text-align: center;
-    }
-  }
-
-  &.candidates-two {
-    div.candidate {
+    @include media($medium) {
+      margin-bottom: em(10);
       @include span-columns(6 of 12);
-      text-align: center;
+      @include omega(2n);
     }
   }
 }
