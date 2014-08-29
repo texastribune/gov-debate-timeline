@@ -2,7 +2,7 @@
   "name": "a-history-of-texas-governors-race-debates",
   "private": true,
   "dependencies": {
-    "newsapps-styles": "texastribune/newsapps-styles#0.3",
+    "newsapps-styles": "texastribune/newsapps-styles#d4a60d517f",
     "pym.js": "~0.3.1"
   }
 }
