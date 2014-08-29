@@ -1,13 +1,8 @@
-body {
-  font-family: Georgia, serif;
-}
+$highlight: transparentize(#90d3c8, .5);
 
-section.debate {
+
+.debate {
   clear: both;
-  border-top: 5px solid black;
-  padding: 1em;
-
-  p { margin: .5em 0; }
 
   div.candidates,
   div.quotes,
@@ -16,19 +11,31 @@ section.debate {
   }
 
   header {
-    font-size: 1.25em;
-    padding: 1em 0;
-    background-color: blue;
+    background-color: $highlight;
+    font-family: $base-sans-serif;
+    margin-bottom: 1em;
+    padding: 0 1em;
+
     h2 {
-      font-family: georgia;
+      font-size: 2em;
+      padding: .5em 0;
+    }
+
+    h3 {
+      font-size: 1.25em;
+      padding: 1em 0;
     }
   }
 
-  h3 {
-    font-family: helvetica;
-  }
-
   .candidates {
+
+    h3 {
+      font-family: $base-sans-serif;
+      font-size: 1.25em;
+      margin-bottom: 1em;
+      padding: 0 1em;
+      padding: 1em 0;
+    }
 
     .candidate {
       .republican { color: red; }
