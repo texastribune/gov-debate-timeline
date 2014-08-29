@@ -396,11 +396,6 @@
   </section>
 </div>
 
-<footer>
-  <div>Source{{ 's' if sources.length > 1 else '' }}: {% for source in sources %}<a href="{{ source.url }}" target="_blank">{{ source.name }}</a> {% if not loop.last %} | {% endif %}{% endfor %}</div>
-  <div>Produced by {% for author in authors %}<a href="{{ author.url }}">{{ author.name }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</div>
-</footer>
-
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
 <!-- endbower -->
