@@ -39,13 +39,11 @@ section.debate {
       div.candidate {
         @include span-columns(3 of 12);
         text-align: center;
-      }
-    }
 
-    &.candidates-three {
-      div.candidate {
-        @include span-columns(4 of 12);
-        text-align: center;
+        @include media($default-480) {
+          @include span-columns(6 of 12);
+          @include omega(2n);
+        }
       }
     }
 
