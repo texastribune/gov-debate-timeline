@@ -38,9 +38,10 @@ section.debate {
     &.candidates-four {
       div.candidate {
         @include span-columns(3 of 12);
+        @include omega-reset(2n);
         text-align: center;
 
-        @include media($default-480) {
+        @include media(max-width 655px) {
           @include span-columns(6 of 12);
           @include omega(2n);
         }
