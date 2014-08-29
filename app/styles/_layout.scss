@@ -28,7 +28,19 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
 
   .explainer-text {
     margin: 0 1em 1em;
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
+
+  // p {
+  //   &:last-child {
+  //     margin-bottom: 0;
+  //   }
+  // }
 }
 
 .candidates {
@@ -57,18 +69,5 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
       @include span-columns(6 of 12);
       text-align: center;
     }
-  }
-}
-
-.news {
-  blockquote {
-    p { margin: 0.25em 0; }
-  }
-}
-
-.quotes {
-  .quote {
-    margin: 1em 0;
-    p { margin: .25em 0; }
   }
 }
