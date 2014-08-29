@@ -44,11 +44,13 @@ $highlight: transparentize(#90d3c8, .5);
 
     &.candidates-four {
       div.candidate {
-        @include span-columns(3 of 12);
-        @include omega-reset(2n);
         text-align: center;
 
-        @include media(max-width 655px) {
+        @include media(min-width em(656)) {
+          @include span-columns(3 of 12);
+        }
+
+        @include media(max-width em(655px)) {
           @include span-columns(6 of 12);
           @include omega(2n);
         }
