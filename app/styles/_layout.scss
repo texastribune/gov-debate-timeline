@@ -1,5 +1,20 @@
 $highlight: transparentize(#90d3c8, .5);
-$yellow-highlight: transparentize($tribune-yellow, .5);
+$sub-highlight: transparentize(#90d3c8, .8);
+
+.prose {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+
+  p,
+  ul {
+    margin-left: 1em;
+  }
+
+  h3 {
+    margin: 0 0 1em;
+  }
+}
 
 .debate {
   clear: both;
@@ -13,7 +28,6 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
   header {
     background-color: $highlight;
     font-family: $base-sans-serif;
-    margin-bottom: 1em;
     padding: 0 1em;
 
     h2 {
@@ -23,7 +37,9 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
   }
 
   h3 {
+    background-color: $sub-highlight;
     font-size: 1.25em;
+    padding: .5em 1em;
   }
 
   .explainer-text {
