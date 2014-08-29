@@ -142,6 +142,15 @@ module.exports = function (grunt) {
       }
     },
 
+    inline: {
+      dist: {
+        options: {
+          tag: ''
+        },
+        src: '<%= config.dist %>/index.html'
+      }
+    },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -263,7 +272,7 @@ module.exports = function (grunt) {
 
     wiredep: {
       app: {
-        src: ['.tmp/{,*/}*.html']
+        src: ['<%= config.app %>/{,*/}*.html']
       }
     }
   });
@@ -294,6 +303,7 @@ module.exports = function (grunt) {
     'copy:compiledHtml',
     'rev',
     'usemin',
+    'inline',
     'htmlmin',
     'copy:pym'
     ]);
