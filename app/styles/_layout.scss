@@ -38,7 +38,7 @@ $sub-highlight: transparentize(#90d3c8, .8);
 
   h3 {
     background-color: $sub-highlight;
-    font-size: 1.25em;
+    font-size: em(16);
     padding: .5em 1em;
   }
 
@@ -59,6 +59,10 @@ $sub-highlight: transparentize(#90d3c8, .8);
 .candidate {
   margin-bottom: 2em;
   text-align: center;
+
+  img {
+    height: 160px;
+  }
 }
 
 $medium: new-breakpoint(max-width em(600));
