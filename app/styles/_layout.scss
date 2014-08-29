@@ -41,6 +41,7 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
 .democratic { color: rgb(0, 0, 255); }
 
 .candidate {
+  margin-bottom: 2em;
   text-align: center;
 }
 
@@ -57,7 +58,7 @@ $medium: new-breakpoint(max-width em(600));
     @include span-columns(3 of 12);
 
     @include media($medium) {
-      margin-bottom: em(10);
+      // margin-bottom: em(10);
       @include span-columns(6 of 12);
       @include omega(2n);
     }
