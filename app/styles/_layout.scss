@@ -1,5 +1,20 @@
 $highlight: transparentize(#90d3c8, .5);
-$yellow-highlight: transparentize($tribune-yellow, .5);
+$sub-highlight: transparentize(#90d3c8, .8);
+
+.prose {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0;
+
+  p,
+  ul {
+    margin-left: 1em;
+  }
+
+  h3 {
+    margin: 0 0 1em;
+  }
+}
 
 .debate {
   clear: both;
@@ -13,7 +28,6 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
   header {
     background-color: $highlight;
     font-family: $base-sans-serif;
-    margin-bottom: 1em;
     padding: 0 1em;
 
     h2 {
@@ -23,7 +37,9 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
   }
 
   h3 {
+    background-color: $sub-highlight;
     font-size: 1.25em;
+    padding: .5em 1em;
   }
 
   .explainer-text {
@@ -35,39 +51,32 @@ $yellow-highlight: transparentize($tribune-yellow, .5);
       }
     }
   }
-
-  // p {
-  //   &:last-child {
-  //     margin-bottom: 0;
-  //   }
-  // }
 }
 
-.candidates {
+.republican { color: rgb(255, 0, 0); }
+.democratic { color: rgb(0, 0, 255); }
 
+.candidate {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+$medium: new-breakpoint(max-width em(600));
+
+.candidates-two {
   .candidate {
-    .republican { color: red; }
-    .democratic { color: blue; }
+    @include span-columns(6 of 12);
   }
+}
 
-  &.candidates-four {
-    div.candidate {
-      @include span-columns(3 of 12);
-      text-align: center;
-    }
-  }
+.candidates-four {
+  .candidate {
+    @include span-columns(3 of 12);
 
-  &.candidates-three {
-    div.candidate {
-      @include span-columns(4 of 12);
-      text-align: center;
-    }
-  }
-
-  &.candidates-two {
-    div.candidate {
+    @include media($medium) {
+      // margin-bottom: em(10);
       @include span-columns(6 of 12);
-      text-align: center;
+      @include omega(2n);
     }
   }
 }
